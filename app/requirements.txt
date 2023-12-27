@@ -1,0 +1,7 @@
+Flask==2.3.3
+python-dotenv
+flask-cors
+requests
+pandas
+openai
+langchain

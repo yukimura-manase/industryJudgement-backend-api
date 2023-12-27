@@ -1,0 +1,34 @@
+version: "3"
+services:
+  # Service名は、flask
+  backend-app:
+    # DockerfileまでのPath
+    build: .
+    # ports => HostPort: CotainerPort の形で、Portを公開している。
+    ports:
+      - "5001:5000"
+    # コンテナに名前をつける
+    container_name: flask_api
+    # Hostマシンの ./app を Container の /usr/src/app にマウントしています。
+    volumes:
+      - ./app:/usr/src/app
+      - /app/__pycache__
+    # 環境変数で、Flaskを開発用サーバーとして指定する => 開発用-Serverには、Hot-Reload機能がある！
+    # Flask の開発用サーバーには、ファイルの変更を検知して自動的にアプリケーションを再起動する機能があります。
+    environment:
+      FLASK_APP: app.py
+      FLASK_ENV: development
+    # Flaskを実行するコマンド
+    command: flask run --host=0.0.0.0
+    # Containerが接続するNetworkを定義
+    networks:
+      - default
+      # ユーザー定義の独自_Network
+      - industry_judgement_app_network
+# servicesと同じ階層(レベル)で、networks という項目を設定
+# Docker Compose環境が接続するNetworkを追加する
+networks:
+  industry_judgement_app_network:
+    name: industry_judgement_app_network
+    # external: true はdocker-composeで管理されていない外部のネットワークという意味
+    external: true
