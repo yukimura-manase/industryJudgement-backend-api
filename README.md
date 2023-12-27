@@ -1,6 +1,6 @@
 # Industry Judgement App BackEnd API
 
-- 会社名と電話番号から、業種を判定するツールのBackEnd-API
+- 会社名と電話番号から、業種を判定するツールの BackEnd-API
 
 ## 環境構築方法(初期 setup)
 
@@ -24,7 +24,7 @@ docker network ls
 ### 1. プロジェクトを Clone
 
 ```bash
-git clone 
+git clone
 ```
 
 ### 2. docker-compose で Dockerfile から image をビルドする
@@ -81,21 +81,3 @@ docker-compose down コマンドを使用して、すべてのコンテナを停
 ```bash
 docker-compose down
 ```
-
----
-
-## 【 関連記事・学習用の記事 】
-
-<br>
-
-### 1. Docker で Python・Flask 環境を構築する方法
-
-[Docker で Python・Flask 環境を構築する方法(ハンズオン講座)](https://masanyon.com/docker-python-flask-env-dockerfile-dockercompose/)
-
-### 2. Docker コンテナの中に入って標準出力を実行する方法: Log 確認\_Develop_Debug_Skill
-
-[Docker コンテナの中に入って標準出力を実行する方法・確認する方法](https://masanyon.com/docker-container-exec-it-logs-inside/)
-
-### 3. 別々の docker-compose.yml で作成された Docker コンテナを Network 接続する方法
-
-[別々の docker-compose.yml で作成された Docker コンテナを Network 接続する方法](https://masanyon.com/docker-docker-compose-yml-container-network-share/)
