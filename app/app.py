@@ -7,6 +7,7 @@ from flask_cors import CORS
 # ルーター: ルーティング設定
 import router
 
+
 def create_app():
 
     # Flask-Appを立ち上げる & templateのDirを指定する
@@ -19,5 +20,6 @@ def create_app():
     CORS(app)
     # resources={r"/api/*": {"origins": "http://localhost:8001"}}
     return app
+
 
 app = create_app()

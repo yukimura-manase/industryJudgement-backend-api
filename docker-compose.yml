@@ -18,8 +18,8 @@ services:
     environment:
       FLASK_APP: app.py
       FLASK_ENV: development
-    # Flaskを実行するコマンド
-    command: flask run --host=0.0.0.0
+    # Flaskを実行するコマンド: HotReload の Optionを付与している (--debugger --reload)
+    command: flask run --host=0.0.0.0 --debugger --reload
     # Containerが接続するNetworkを定義
     networks:
       - default

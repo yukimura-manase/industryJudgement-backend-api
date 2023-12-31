@@ -1,5 +1,7 @@
 # Industry Judgement App BackEnd API
 
+## App 概要
+
 - 会社名と電話番号から、業種を判定するツールの BackEnd-API
 
 ## 環境構築方法(初期 setup)
