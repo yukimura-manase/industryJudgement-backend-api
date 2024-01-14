@@ -29,11 +29,9 @@ import traceback
 ## 環境変数 ##
 dotenv.load_dotenv('.env')
 
-# 1. Project・Root Path
-project_root = os.path.abspath("../")
-
-# 2. OPENAI_KEY を取得する
-OPENAI_KEY = dotenv.get_key(f'{project_root}/.env', 'OPENAI_KEY')
+# OPENAI_KEY を取得する
+OPENAI_KEY = dotenv.get_key('.env', 'OPENAI_KEY')
+print('OPENAI_KEY: ', OPENAI_KEY)
 
 
 def industryJudge(target_file):
