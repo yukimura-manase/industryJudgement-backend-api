@@ -37,11 +37,11 @@ git clone git@github.com:yukimura-manase/industryJudgement-backend-api.git
 
 - ARM 対応の Selenium Docker Image を使わないと M1 Mac などでは動きません。
 
-  - 詳細は、[Python Selenium について](https://zenn.dev/manase/scraps/28fe7b34824e79)をご参照ください。
+  - 詳細は、[system spec が通らなくなった問題を SeleniARM で解決！](https://zenn.dev/lovegraph/articles/26109f0bc2f4c5)をご参照ください。
 
   - ちなみに、ARM 対応の Image 名は、docker-selenium ではなく、 docker-seleniarm になっている。。。芸が細かい。。。
 
-- 環境に応じて、`docker-compose.yml`の編集をお願いします。
+- 環境に応じて、`docker-compose.yml`の`selenium`のコメントアウト箇所の編集をお願いします。
 
 ### 3. docker-compose で Dockerfile から image をビルドする
 
@@ -107,3 +107,5 @@ docker-compose down
 ## 参考・引用
 
 1. [Python Selenium について](https://zenn.dev/manase/scraps/28fe7b34824e79)
+
+2. [system spec が通らなくなった問題を SeleniARM で解決！](https://zenn.dev/lovegraph/articles/26109f0bc2f4c5)
