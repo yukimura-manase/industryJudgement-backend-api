@@ -1,0 +1,398 @@
+[
+	{
+		"industry_id": "01",
+		"industry": "農業"
+	},
+	{
+		"industry_id": "02",
+		"industry": "林業"
+	},
+	{
+		"industry_id": "03",
+		"industry": "漁業（水産養殖業を除く）"
+	},
+	{
+		"industry_id": "04",
+		"industry": "水産養殖業"
+	},
+	{
+		"industry_id": "05",
+		"industry": "鉱業，採石業，砂利採取業"
+	},
+	{
+		"industry_id": "06",
+		"industry": "総合工事業"
+	},
+	{
+		"industry_id": "07",
+		"industry": "職別工事業(設備工事業を除く)"
+	},
+	{
+		"industry_id": "08",
+		"industry": "設備工事業"
+	},
+	{
+		"industry_id": "09",
+		"industry": "食料品製造業"
+	},
+	{
+		"industry_id": "10",
+		"industry": "飲料・たばこ・飼料製造業"
+	},
+	{
+		"industry_id": "11",
+		"industry": "繊維工業"
+	},
+	{
+		"industry_id": "12",
+		"industry": "木材・木製品製造業（家具を除く）"
+	},
+	{
+		"industry_id": "13",
+		"industry": "家具・装備品製造業"
+	},
+	{
+		"industry_id": "14",
+		"industry": "パルプ・紙・紙加工品製造業"
+	},
+	{
+		"industry_id": "15",
+		"industry": "印刷・同関連業"
+	},
+	{
+		"industry_id": "16",
+		"industry": "化学工業"
+	},
+	{
+		"industry_id": "17",
+		"industry": "石油製品・石炭製品製造業"
+	},
+	{
+		"industry_id": "18",
+		"industry": "プラスチック製品製造業（別掲を除く）"
+	},
+	{
+		"industry_id": "19",
+		"industry": "ゴム製品製造業"
+	},
+	{
+		"industry_id": "20",
+		"industry": "なめし革・同製品・毛皮製造業"
+	},
+	{
+		"industry_id": "21",
+		"industry": "窯業・土石製品製造業"
+	},
+	{
+		"industry_id": "22",
+		"industry": "鉄鋼業"
+	},
+	{
+		"industry_id": "23",
+		"industry": "非鉄金属製造業"
+	},
+	{
+		"industry_id": "24",
+		"industry": "金属製品製造業"
+	},
+	{
+		"industry_id": "25",
+		"industry": "はん用機械器具製造業"
+	},
+	{
+		"industry_id": "26",
+		"industry": "生産用機械器具製造業"
+	},
+	{
+		"industry_id": "27",
+		"industry": "業務用機械器具製造業"
+	},
+	{
+		"industry_id": "28",
+		"industry": "電子部品・デバイス・電子回路製造業"
+	},
+	{
+		"industry_id": "29",
+		"industry": "電気機械器具製造業"
+	},
+	{
+		"industry_id": "30",
+		"industry": "情報通信機械器具製造業"
+	},
+	{
+		"industry_id": "31",
+		"industry": "輸送用機械器具製造業"
+	},
+	{
+		"industry_id": "32",
+		"industry": "その他の製造業"
+	},
+	{
+		"industry_id": "33",
+		"industry": "電気業"
+	},
+	{
+		"industry_id": "34",
+		"industry": "ガス業"
+	},
+	{
+		"industry_id": "35",
+		"industry": "熱供給業"
+	},
+	{
+		"industry_id": "36",
+		"industry": "水道業"
+	},
+	{
+		"industry_id": "37",
+		"industry": "通信業"
+	},
+	{
+		"industry_id": "38",
+		"industry": "放送業"
+	},
+	{
+		"industry_id": "39",
+		"industry": "情報サービス業"
+	},
+	{
+		"industry_id": "40",
+		"industry": "インターネット附随サービス業"
+	},
+	{
+		"industry_id": "41",
+		"industry": "映像・音声・文字情報制作業"
+	},
+	{
+		"industry_id": "42",
+		"industry": "鉄道業"
+	},
+	{
+		"industry_id": "43",
+		"industry": "道路旅客運送業"
+	},
+	{
+		"industry_id": "44",
+		"industry": "道路貨物運送業"
+	},
+	{
+		"industry_id": "45",
+		"industry": "水運業"
+	},
+	{
+		"industry_id": "46",
+		"industry": "航空運輸業"
+	},
+	{
+		"industry_id": "47",
+		"industry": "倉庫業"
+	},
+	{
+		"industry_id": "48",
+		"industry": "運輸に附帯するサービス業"
+	},
+	{
+		"industry_id": "49",
+		"industry": "郵便業（信書便事業を含む）"
+	},
+	{
+		"industry_id": "50",
+		"industry": "各種商品卸売業"
+	},
+	{
+		"industry_id": "51",
+		"industry": "繊維・衣服等卸売業"
+	},
+	{
+		"industry_id": "52",
+		"industry": "飲食料品卸売業"
+	},
+	{
+		"industry_id": "53",
+		"industry": "建築材料，鉱物・金属材料等卸売業"
+	},
+	{
+		"industry_id": "54",
+		"industry": "機械器具卸売業"
+	},
+	{
+		"industry_id": "55",
+		"industry": "その他の卸売業"
+	},
+	{
+		"industry_id": "56",
+		"industry": "各種商品小売業"
+	},
+	{
+		"industry_id": "57",
+		"industry": "織物・衣服・身の回り品小売業"
+	},
+	{
+		"industry_id": "58",
+		"industry": "飲食料品小売業"
+	},
+	{
+		"industry_id": "59",
+		"industry": "機械器具小売業"
+	},
+	{
+		"industry_id": "60",
+		"industry": "その他の小売業"
+	},
+	{
+		"industry_id": "61",
+		"industry": "無店舗小売業"
+	},
+	{
+		"industry_id": "62",
+		"industry": "銀行業"
+	},
+	{
+		"industry_id": "63",
+		"industry": "協同組織金融業"
+	},
+	{
+		"industry_id": "64",
+		"industry": "貸金業，クレジットカード業等非預金信用機関"
+	},
+	{
+		"industry_id": "65",
+		"industry": "金融商品取引業，商品先物取引業"
+	},
+	{
+		"industry_id": "66",
+		"industry": "補助的金融業等"
+	},
+	{
+		"industry_id": "67",
+		"industry": "保険業（保険媒介代理業，保険サービス業を含む）"
+	},
+	{
+		"industry_id": "68",
+		"industry": "不動産取引業"
+	},
+	{
+		"industry_id": "69",
+		"industry": "不動産賃貸業・管理業"
+	},
+	{
+		"industry_id": "70",
+		"industry": "物品賃貸業"
+	},
+	{
+		"industry_id": "71",
+		"industry": "学術・開発研究機関"
+	},
+	{
+		"industry_id": "72",
+		"industry": "専門サービス業（他に分類されないもの）"
+	},
+	{
+		"industry_id": "73",
+		"industry": "広告業"
+	},
+	{
+		"industry_id": "74",
+		"industry": "技術サービス業（他に分類されないもの）"
+	},
+	{
+		"industry_id": "75",
+		"industry": "宿泊業"
+	},
+	{
+		"industry_id": "76",
+		"industry": "飲食店"
+	},
+	{
+		"industry_id": "77",
+		"industry": "持ち帰り・配達飲食サービス業"
+	},
+	{
+		"industry_id": "78",
+		"industry": "洗濯・理容・美容・浴場業"
+	},
+	{
+		"industry_id": "79",
+		"industry": "その他の生活関連サービス業"
+	},
+	{
+		"industry_id": "80",
+		"industry": "娯楽業"
+	},
+	{
+		"industry_id": "81",
+		"industry": "学校教育"
+	},
+	{
+		"industry_id": "82",
+		"industry": "その他の教育，学習支援業"
+	},
+	{
+		"industry_id": "83",
+		"industry": "医療業"
+	},
+	{
+		"industry_id": "84",
+		"industry": "保健衛生"
+	},
+	{
+		"industry_id": "85",
+		"industry": "社会保険・社会福祉・介護事業"
+	},
+	{
+		"industry_id": "86",
+		"industry": "郵便局"
+	},
+	{
+		"industry_id": "87",
+		"industry": "協同組合（他に分類されないもの）"
+	},
+	{
+		"industry_id": "88",
+		"industry": "廃棄物処理業"
+	},
+	{
+		"industry_id": "89",
+		"industry": "自動車整備業"
+	},
+	{
+		"industry_id": "90",
+		"industry": "機械等修理業（別掲を除く）"
+	},
+	{
+		"industry_id": "91",
+		"industry": "職業紹介・労働者派遣業"
+	},
+	{
+		"industry_id": "92",
+		"industry": "その他の事業サービス業"
+	},
+	{
+		"industry_id": "93",
+		"industry": "政治・経済・文化団体"
+	},
+	{
+		"industry_id": "94",
+		"industry": "宗教"
+	},
+	{
+		"industry_id": "95",
+		"industry": "その他のサービス業"
+	},
+	{
+		"industry_id": "96",
+		"industry": "外国公務"
+	},
+	{
+		"industry_id": "97",
+		"industry": "国家公務"
+	},
+	{
+		"industry_id": "98",
+		"industry": "地方公務"
+	},
+	{
+		"industry_id": "99",
+		"industry": "分類不能の産業"
+	}
+]
