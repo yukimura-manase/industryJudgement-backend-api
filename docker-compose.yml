@@ -41,8 +41,6 @@ services:
       - "5900:5900"
       # Selenium サーバのログを出力するポート
       - "7900:7900"
-    # コンテナが使用するメモリの上限を設定
-    shm_size: "2gb"
     networks:
       - industry_judgement_app_network
 # servicesと同じ階層(レベル)で、networks という項目を設定
