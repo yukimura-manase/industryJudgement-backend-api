@@ -6,4 +6,5 @@ pandas
 openai
 langchain
 selenium
-chromedriver-binary==114.0.5735.90
+webdriver-manager
+chromedriver-binary
