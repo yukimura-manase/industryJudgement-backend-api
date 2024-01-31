@@ -63,9 +63,6 @@ def industryJudge(industry_json_params):
 
     制約条件: 
     * あなたは、日本の会社に詳しいChatbotで、必ずJSONの形で回答します。
-    * 「業種」を判断する際の参考情報として、あなたの知識と合わせて、以下の「事業内容・業種」の情報(説明文)も参考にしてください。
-    
-    「事業内容・業種」の情報(説明文):
     '''
 
     # CSV の Column・Row List を取得する
@@ -89,24 +86,38 @@ def industryJudge(industry_json_params):
     print(phone_number)
     print('----------------------------------------------------')
 
-    # 2. 電話番号(会社の代表番号: 固定電話)と会社名から「事業内容・業種」の情報(説明文)を取得する
+    ### 2. 「事業内容・業種」の情報(説明文)を追加する ###
+
+    # 2-1. 電話番号(会社の代表番号: 固定電話)と会社名から「事業内容・業種」の情報(説明文)を取得する
     scraping_results = industry_info_scraping(company_name, phone_number)
     print('Webスクレイピングの結果()')
     print(scraping_results)
     print('----------------------------------------------------')
-    # 質問文に、事業内容・業種の情報(説明文)を追加して、質問する
 
-    # 3. プロンプトに、事業内容・業種の情報(説明文)を追加する
-    for description in scraping_results:
-        print('description')
-        print(description)
-        prompt = f'{prompt}\n * {description}'
+    # 2-2. 事業内容・業種の情報(説明文)のText
+    scraping_text = '''
+    * 「業種」を判断する際の参考情報として、あなたの知識と合わせて、以下の「事業内容・業種」の情報(説明文)も参考にしてください。
+    
+    「事業内容・業種」の情報(説明文):
+    '''
+
+    # 2-3. スクレイピングに成功した場合は、事業内容・業種の情報(説明文)を追加する
+    if len(scraping_results) > 0:
+        print('スクレイピング成功')
+
+        prompt = f'{prompt}\n * {scraping_text}'
+
+        # プロンプトに、事業内容・業種の情報(説明文)を 1つずつ追加する
+        for description in scraping_results:
+            print('description')
+            print(description)
+            prompt = f'{prompt}\n * {description}'
 
     print('作成された質問文(「 会社名 電話番号 事業内容・業種 」で検索)')
     print(prompt)
     print('----------------------------------------------------')
 
-    # 業種の一覧・JSONデータを読み込む
+    # 3. 業種の一覧・JSONデータを読み込む
     industry_json_path = f'{os.getcwd()}/industry.json'
     industry_json_file = open(industry_json_path, 'r', encoding="utf-8")
     industry_json_data = json.load(industry_json_file)
@@ -123,7 +134,7 @@ def industryJudge(industry_json_params):
     「業種」に対する回答の事例:
     '''
 
-    # 5. 業種に対する回答の事例に、業種情報を追加する
+    # 5. 業種に対する回答の事例に、業種カテゴリーを 1つずつ追加する
     for value in industry_json_data:
         industry_answer_text = f'{industry_answer_text}\n * {value["industry"]}'
 
@@ -276,4 +287,5 @@ def industry_info_scraping(company_name, tell):
         print('取得した説明文・Text の List')
         print(search_result_list)
 
+        # 取得した説明文・Text の List を返す or 途中でエラーが発生しても、空配列を返す
         return search_result_list
