@@ -30,6 +30,7 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import traceback
+from selenium.webdriver.chrome.service import Service
 
 ## 環境変数 ##
 dotenv.load_dotenv('.env')
@@ -159,30 +160,41 @@ def industryJudge(industry_json_params):
     response = llm(messages)
     json_string = response.content
 
-    # Pythonで、文字列として、渡された JSONデータの形をJSONデータにする
-    json_data = json.loads(json_string)
+    try:
+        # Pythonで、文字列として、渡された JSONデータの形をJSONデータにする
+        json_data = json.loads(json_string)
 
-    # 業種
-    industry = json_data['industry']
+        # 業種
+        industry = json_data['industry']
 
-    print('industry: ', industry)
-    print(f'[判定・成功] {company_name}:{industry}')
-    print('----------------------------------------------------')
+        print('industry: ', industry)
+        print(f'[判定・成功] {company_name}:{industry}')
+        print('----------------------------------------------------')
 
-    target_row[industry_idx] = industry
+        target_row[industry_idx] = industry
 
-    print('target_row')
-    print(target_row)
-    print('----------------------------------------------------')
+        print('target_row')
+        print(target_row)
+        print('----------------------------------------------------')
 
-    # return target_row
+    except Exception as error:
+        # traceback.format_exc() で例外の詳細情報を取得する
+        error_msg: str = traceback.format_exc()
+        print(error_msg)
+        target_row[industry_idx] = '業種判定エラー'
 
-    json_encode = json.dumps(target_row, ensure_ascii=False, indent=2)
-    print('json_encode')
-    print(json_encode)
-    print('----------------------------------------------------')
+        # 例外を無視したい場合は、pass を使用する
+        pass
 
-    return json_encode
+    # finally-ブロック => 必ず最後に実行される処理
+    finally:
+        json_encode = json.dumps(target_row, ensure_ascii=False, indent=2)
+        print('json_encode')
+        print(json_encode)
+        print('----------------------------------------------------')
+
+        print('必ず最後に実行したり処理を実行するブロック')
+        return json_encode
 
 
 ### industry_info_scraping ###############################################
@@ -192,6 +204,8 @@ def industryJudge(industry_json_params):
 ##########################################################################
 
 def industry_info_scraping(company_name, tell):
+
+    print('Webスクレイピングの Python Script Start！')
 
     # webdriver.Remote() で Selenium Container を指定して、接続する。
     browser = webdriver.Remote(
